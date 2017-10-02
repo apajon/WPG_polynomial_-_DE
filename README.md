@@ -21,3 +21,5 @@ mex '-IC:\Users\Giovanni\Documents\eigen-eigen-1306d75b4a21\eigen-eigen-1306d75b
 
 In main.m is the WPG built-in as a programming object in matlab.
 However, it is note up-to-date with the previous method (notably the deformation estimator links)
+
+In WPG detailed, a latex description of QP formulation of the WPG can be found.

@@ -2,6 +2,9 @@
 
 Developped for Matlab 2012a and more recent
 
+WPG based on 5th order polynomials interpolated between via-points and a deformation estimator to take into account soft sole deformation detailed in https://www.researchgate.net/publication/318412580_Optimized_Humanoid_Walking_with_Soft_Soles
+
+
 Launch AA_constant => tune the WPG parameters to chose/describe the wanted trajectory
 
 run script up to AD_QP_optimization => optimization criteria weight can be chosen

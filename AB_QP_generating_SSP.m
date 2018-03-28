@@ -68,5 +68,18 @@ Bscomeq=[xBscomeq;
 'time to generate qp SSP'
 toc
 
+%% %zmp type wanted
+%only 8 is currently enable
+zmp_type=8;
+%0 : solution ICRA2015 + min acc zmp1
+%1 : zmp1 analytical
+%2 : zmp1 with force repartition which allow discontinuity
+%3 : zmp1 with force repartition which allow discontinuity and constraint zmp1&2 speed >0
+%4 : solution ICRA2015 and constraint zmp1&2 speed >0
+%5 : solution ICRA2015 + min acc zmp1 + min acc zmp2 + zmp1&2 speed >0
+%6 : solution ICRA2015 + szmp1&2 near szmp
+%7 : solution ICRA2015 + pzmp1&2 near pzmp
+%8 : solution ICRA2015 + min acc zmp1 + min acc zmp2
+
 %% %%%%%%%
 open('AC_QP_generating_DSP_08_icra2015_azmp.m')

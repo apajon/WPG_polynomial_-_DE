@@ -33,7 +33,7 @@ walking_param=new_walking_param(robot,type_traj,firstSS,frequency,lambda,epsilon
 opt = optimset('Algorithm', 'interior-point-convex','Display','iter');%,'MaxIter',1000,'TolFun',1e-6);
 switch(walking_param.optim_type)
     case {1,2,3}
-        [walking_param.psa_abcdDSP toto]=quadprog(H,f,A,b,Aeq,-beq,[],[],[],opt);
+        [walking_param.psa_abcdDSP toto]=quadprog(sparse(H),sparse(f),sparse(A),sparse(b),sparse(Aeq),sparse(-beq),[],[],[],opt);
 %     case 4
 %         psa_abcdDSP=quadprog(AviapointDSP,BviapointDSP,AconstraintDSP_anal,BconstraintDSP_anal,AscomeqDSP_path,-Bscomeq_path,[],[],[],opt);
 end

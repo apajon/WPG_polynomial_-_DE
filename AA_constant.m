@@ -2,20 +2,20 @@ clear all
 clc
 %%
 %for windows
-addpath .\cost_viapoint
-addpath .\generator_zmp
-addpath .\generator_com
-addpath .\f_com
-addpath .\torque_ankle
-addpath .\divers
+% addpath .\cost_viapoint
+% addpath .\generator_zmp
+% addpath .\generator_com
+% addpath .\f_com
+% addpath .\torque_ankle
+% addpath .\divers
 
-%for linux
-% addpath ./cost_viapoint
-% addpath ./generator_zmp
-% addpath ./generator_com
-% addpath ./f_com
-% addpath ./torque_ankle
-% addpath ./divers
+%for linux or MAC OS
+addpath ./cost_viapoint
+addpath ./generator_zmp
+addpath ./generator_com
+addpath ./f_com
+addpath ./torque_ankle
+addpath ./divers
 
 %% %%%chosse the robot%%%
 robot=2;

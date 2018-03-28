@@ -124,7 +124,7 @@ tic
 opt = optimset('Algorithm', 'interior-point-convex','Display','iter');
 switch(optim_type)
     case {1,2,3}
-        psa_abcdDSP=quadprog(AviapointDSP,BviapointDSP,AconstraintDSP,BconstraintDSP,AscomeqDSP_path,-Bscomeq_path,[],[],[],opt);
+        psa_abcdDSP=quadprog(sparse(AviapointDSP),sparse(BviapointDSP),sparse(AconstraintDSP),sparse(BconstraintDSP),sparse(AscomeqDSP_path),sparse(-Bscomeq_path),[],[],[],opt);
     case 4
         psa_abcdDSP=quadprog(AviapointDSP,BviapointDSP,AconstraintDSP_anal,BconstraintDSP_anal,AscomeqDSP_path,-Bscomeq_path,[],[],[],opt);
 end

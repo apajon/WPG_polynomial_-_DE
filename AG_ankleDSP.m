@@ -10,17 +10,29 @@ clc
 % tpp=load('00_theta_phi_psi.mat');
 %%
 %  load('result_FEM_06_15_oscillation_tss800_tds400_320000.mat')
- fet1_r_=[any(fet2_r_,2)*0 any(fet1_r_,2)*0.0650 any(fet1_r_,2)*0.021];
- fet2_r_=[any(fet2_r_,2)*0 any(fet2_r_,2)*(-0.0650) any(fet2_r_,2)*0.021];
- fet3_r_=[any(fet3_r_,2)*0.23 any(fet3_r_,2)*0.0650 any(fet3_r_,2)*0.021];
- fet4_r_=[any(fet4_r_,2)*0.23 any(fet4_r_,2)*(-0.0650) any(fet4_r_,2)*0.021];
- tpp_r_=[zeros(size(tpp_r_,1),3)];
+ fet1_r_=repmat([0 0.0650 0.021],size(xpcom,1),1);
+ fet2_r_=repmat([0 (-0.0650) 0.021],size(xpcom,1),1);
+ fet3_r_=repmat([0.23 0.0650 0.021],size(xpcom,1),1);
+ fet4_r_=repmat([0.23 (-0.0650) 0.021],size(xpcom,1),1);
+ tpp_r_=repmat([0 0 0],size(xpcom,1),1);
  
- fet1_l_=[any(fet2_l_,2)*0 any(fet1_l_,2)*0.0650 any(fet1_l_,2)*0.021];
- fet2_l_=[any(fet2_l_,2)*0 any(fet2_l_,2)*(-0.0650) any(fet2_l_,2)*0.021];
- fet3_l_=[any(fet3_l_,2)*0.23 any(fet3_l_,2)*0.0650 any(fet3_l_,2)*0.021];
- fet4_l_=[any(fet4_l_,2)*0.23 any(fet4_l_,2)*(-0.0650) any(fet4_l_,2)*0.021];
- tpp_l_=[zeros(size(tpp_l_,1),3)];
+ fet1_l_=repmat([0 0.0650 0.021],size(xpcom,1),1);
+ fet2_l_=repmat([0 (-0.0650) 0.021],size(xpcom,1),1);
+ fet3_l_=repmat([0.23 0.0650 0.021],size(xpcom,1),1);
+ fet4_l_=repmat([0.23 (-0.0650) 0.021],size(xpcom,1),1);
+ tpp_l_=repmat([0 0 0],size(xpcom,1),1);
+
+%  fet1_r_=[any(fet2_r_,2)*0 any(fet1_r_,2)*0.0650 any(fet1_r_,2)*0.021];
+%  fet2_r_=[any(fet2_r_,2)*0 any(fet2_r_,2)*(-0.0650) any(fet2_r_,2)*0.021];
+%  fet3_r_=[any(fet3_r_,2)*0.23 any(fet3_r_,2)*0.0650 any(fet3_r_,2)*0.021];
+%  fet4_r_=[any(fet4_r_,2)*0.23 any(fet4_r_,2)*(-0.0650) any(fet4_r_,2)*0.021];
+%  tpp_r_=[zeros(size(tpp_r_,1),3)];
+%  
+%  fet1_l_=[any(fet2_l_,2)*0 any(fet1_l_,2)*0.0650 any(fet1_l_,2)*0.021];
+%  fet2_l_=[any(fet2_l_,2)*0 any(fet2_l_,2)*(-0.0650) any(fet2_l_,2)*0.021];
+%  fet3_l_=[any(fet3_l_,2)*0.23 any(fet3_l_,2)*0.0650 any(fet3_l_,2)*0.021];
+%  fet4_l_=[any(fet4_l_,2)*0.23 any(fet4_l_,2)*(-0.0650) any(fet4_l_,2)*0.021];
+%  tpp_l_=[zeros(size(tpp_l_,1),3)];
 
 %  fet1_r_=[zeros(size(xpzmp,1),1) ones(size(xpzmp,1),1)*0.0650 ones(size(xpzmp,1),1)*0.021];
 %  fet2_r_=[zeros(size(xpzmp,1),1) ones(size(xpzmp,1),1)*(-0.0650) ones(size(xpzmp,1),1)*0.021];
